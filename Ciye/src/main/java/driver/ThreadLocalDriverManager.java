@@ -13,7 +13,7 @@ import java.time.Duration;
 
 /**
  * Thread Local Driver Manager
- * Manages AndroidDriver instances for parallel test execution
+ * Manages AndroidDriver instances for parallel test execution across identical devices
  *
  * @author Ciye Test Team
  */
@@ -22,35 +22,26 @@ public class ThreadLocalDriverManager {
     private static final ThreadLocal<AndroidDriver> driverThreadLocal = new ThreadLocal<>();
     private static final ThreadLocal<String> deviceIdThreadLocal = new ThreadLocal<>();
 
-    /**
-     * Initialize driver for specific device
-     */
     public static void initializeDriver(String deviceId) {
         try {
             LogUtils.info("Initializing driver for device: " + deviceId + " on thread: " + Thread.currentThread().getName());
 
-            // Set device ID for current thread
             deviceIdThreadLocal.set(deviceId);
 
-            // Create capabilities for device
             UiAutomator2Options options = DeviceCapabilityFactory.createCapabilities(deviceId);
-
-            // Get Appium server URL for device
             String serverUrl = VirtualDeviceConfig.getAppiumServerUrl(deviceId);
 
-            // Create driver instance
             AndroidDriver driver = new AndroidDriver(
                     new URI(serverUrl).toURL(),
                     options
             );
 
-            // Set implicit wait
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-            // Store driver in thread local
             driverThreadLocal.set(driver);
 
-            LogUtils.info("Driver initialized successfully for device: " + deviceId);
+            VirtualDeviceConfig.DeviceInfo deviceInfo = VirtualDeviceConfig.getDeviceInfo(deviceId);
+            LogUtils.info("Driver initialized successfully for device: " + deviceId +
+                    " (Model: " + deviceInfo.model + ", Resolution: " + deviceInfo.resolution + ")");
 
         } catch (MalformedURLException | URISyntaxException e) {
             LogUtils.error("Failed to initialize driver for device: " + deviceId + " - " + e.getMessage());
@@ -58,9 +49,6 @@ public class ThreadLocalDriverManager {
         }
     }
 
-    /**
-     * Get current thread's driver
-     */
     public static AndroidDriver getDriver() {
         AndroidDriver driver = driverThreadLocal.get();
         if (driver == null) {
@@ -69,33 +57,39 @@ public class ThreadLocalDriverManager {
         return driver;
     }
 
-    /**
-     * Get current thread's device ID
-     */
     public static String getCurrentDeviceId() {
-        return deviceIdThreadLocal.get();
+        String deviceId = deviceIdThreadLocal.get();
+        if (deviceId == null) {
+            throw new RuntimeException("Device ID not set for current thread: " + Thread.currentThread().getName());
+        }
+        return deviceId;
     }
 
-    /**
-     * Quit driver for current thread
-     */
     public static void quitDriver() {
-        AndroidDriver driver = driverThreadLocal.get();
-        String deviceId = deviceIdThreadLocal.get();
+        try {
+            AndroidDriver driver = driverThreadLocal.get();
+            String deviceId = getCurrentDeviceId();
 
-        if (driver != null) {
-            LogUtils.info("Quitting driver for device: " + deviceId + " on thread: " + Thread.currentThread().getName());
-            driver.quit();
+            if (driver != null) {
+                driver.quit();
+                LogUtils.info("Driver quit successfully for device: " + deviceId);
+            } else {
+                LogUtils.warn("No driver found to quit for device: " + deviceId);
+            }
+        } catch (Exception e) {
+            LogUtils.error("Failed to quit driver: " + e.getMessage());
+        } finally {
             driverThreadLocal.remove();
             deviceIdThreadLocal.remove();
-            LogUtils.info("Driver quit successfully for device: " + deviceId);
         }
     }
 
-    /**
-     * Check if driver is active for current thread
-     */
-    public static boolean isDriverActive() {
+    public static boolean isDriverInitialized() {
         return driverThreadLocal.get() != null;
+    }
+
+    public static VirtualDeviceConfig.DeviceInfo getCurrentDeviceInfo() {
+        String deviceId = getCurrentDeviceId();
+        return VirtualDeviceConfig.getDeviceInfo(deviceId);
     }
 }

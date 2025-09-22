@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="CiyeMultiDeviceTestSuite" verbose="1" parallel="tests" thread-count="3">
+    <parameter name="environment" value="dev"/>
+
+    <listeners>
+        <listener class-name="listeners.AllureListener"/>
+    </listeners>
+
+    <!-- Device 1: Pixel 7 Pro -->
+    <test name="LoginTests_Pixel7Pro" preserve-order="false">
+        <parameter name="deviceId" value="device1"/>
+        <classes>
+            <class name="tests.LoginTests"/>
+        </classes>
+    </test>
+
+    <!-- Device 2: Pixel 8 -->
+    <test name="LoginTests_Pixel8" preserve-order="false">
+        <parameter name="deviceId" value="device2"/>
+        <classes>
+            <class name="tests.LoginTests"/>
+        </classes>
+    </test>
+
+    <!-- Device 3: Pixel 9 -->
+    <test name="LoginTests_Pixel9" preserve-order="false">
+        <parameter name="deviceId" value="device3"/>
+        <classes>
+            <class name="tests.LoginTests"/>
+        </classes>
+    </test>
+</suite>

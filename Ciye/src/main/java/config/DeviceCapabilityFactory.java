@@ -4,15 +4,12 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 
 /**
  * Device Capability Factory
- * Creates device-specific capabilities for parallel testing
+ * Creates standardized capabilities for identical Android 14 emulators
  *
  * @author Ciye Test Team
  */
 public class DeviceCapabilityFactory {
 
-    /**
-     * Create capabilities for specific device
-     */
     public static UiAutomator2Options createCapabilities(String deviceId) {
         VirtualDeviceConfig.DeviceInfo device = VirtualDeviceConfig.getDeviceInfo(deviceId);
 
@@ -22,7 +19,7 @@ public class DeviceCapabilityFactory {
 
         UiAutomator2Options options = new UiAutomator2Options();
 
-        // Device capabilities
+        // Platform capabilities
         options.setPlatformName("Android");
         options.setAutomationName("UiAutomator2");
         options.setPlatformVersion(device.platformVersion);
@@ -35,16 +32,21 @@ public class DeviceCapabilityFactory {
         options.setNoReset(AppConfig.getNoReset());
         options.setCapability("autoGrantPermissions", AppConfig.getAutoGrantPermissions());
 
-        // Additional capabilities
+        // Performance and stability capabilities
         options.setCapability("appium:newCommandTimeout", 300);
         options.setCapability("appium:androidInstallTimeout", 90000);
+        options.setCapability("appium:uiautomator2ServerLaunchTimeout", 60000);
+        options.setCapability("appium:uiautomator2ServerInstallTimeout", 60000);
+        options.setCapability("appium:adbExecTimeout", 20000);
+
+        // Device-specific optimizations
+        options.setCapability("appium:ignoreHiddenApiPolicyError", true);
+        options.setCapability("appium:disableIdLocatorAutocompletion", true);
+        options.setCapability("appium:ensureWebviewsHavePages", true);
 
         return options;
     }
 
-    /**
-     * Create capabilities for all devices
-     */
     public static UiAutomator2Options[] createAllCapabilities() {
         String[] deviceIds = VirtualDeviceConfig.getAllDeviceIds();
         UiAutomator2Options[] allCapabilities = new UiAutomator2Options[deviceIds.length];
