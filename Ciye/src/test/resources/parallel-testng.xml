@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="CiyeParallelTestSuite" verbose="1" parallel="methods" thread-count="3" data-provider-thread-count="3">
+    <parameter name="environment" value="dev"/>
+
+    <listeners>
+        <listener class-name="listeners.AllureListener"/>
+    </listeners>
+
+    <!-- Parallel Login Tests -->
+    <test name="ParallelLoginTests" preserve-order="false">
+        <parameter name="deviceId" value="device1"/>
+        <classes>
+            <class name="tests.ParallelLoginTests"/>
+        </classes>
+    </test>
+
+    <!-- Data-driven parallel execution -->
+    <test name="DataDrivenParallelTests" preserve-order="false">
+        <classes>
+            <class name="tests.DataDrivenParallelTests"/>
+        </classes>
+    </test>
+</suite>

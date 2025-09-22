@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="CiyeAppTestSuite" verbose="1" parallel="false" thread-count="1">
+    <parameter name="environment" value="dev"/>
+
+    <listeners>
+        <listener class-name="listeners.AllureListener"/>
+    </listeners>
+
+    <!-- Test Groups -->
+    <test name="LoginTests" preserve-order="true">
+        <groups>
+            <run>
+                <include name="login"/>
+                <include name="validation"/>
+                <include name="navigation"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.LoginTests"/>
+        </classes>
+    </test>
+
+    <test name="ProfileTests" preserve-order="true">
+        <groups>
+            <run>
+                <include name="profile"/>
+                <include name="session"/>
+                <include name="navigation"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.ProfileTests"/>
+        </classes>
+    </test>
+
+    <!-- Smoke Test Suite - Critical tests only -->
+    <test name="SmokeTests" preserve-order="true" enabled="false">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.LoginTests">
+                <methods>
+                    <include name="testValidLogin"/>
+                </methods>
+            </class>
+            <class name="tests.ProfileTests">
+                <methods>
+                    <include name="testUserLogout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Regression Test Suite - All tests -->
+    <test name="RegressionTests" preserve-order="true" enabled="false">
+        <packages>
+            <package name="tests.*"/>
+        </packages>
+    </test>
+</suite>

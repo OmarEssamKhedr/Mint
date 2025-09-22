@@ -1,0 +1,16 @@
+2025-09-22 15:50:22:479 [Appium] Welcome to Appium v3.0.2
+2025-09-22 15:50:22:480 [Appium] Non-default server args:
+2025-09-22 15:50:22:481 [Appium] {
+  port: 4725
+}
+2025-09-22 15:50:22:482 [Appium] The autodetected Appium home path: /media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint
+2025-09-22 15:50:22:482 [Appium] Attempting to load driver uiautomator2...
+2025-09-22 15:50:22:483 [Appium] Requiring driver at /media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/node_modules/appium-uiautomator2-driver/build/index.js
+2025-09-22 15:50:23:962 [Appium] AndroidUiautomator2Driver has been successfully loaded in 1.479s
+2025-09-22 15:50:23:982 [Appium] Appium REST http interface listener started on http://0.0.0.0:4725
+2025-09-22 15:50:23:983 [Appium] You can provide the following URLs in your client code to connect to this server:
+	http://127.0.0.1:4725/ (only accessible from the same host)
+	http://192.168.100.5:4725/
+2025-09-22 15:50:23:983 [Appium] Available drivers:
+2025-09-22 15:50:23:984 [Appium]   - uiautomator2@5.0.3 (automationName 'UiAutomator2')
+2025-09-22 15:50:23:984 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
