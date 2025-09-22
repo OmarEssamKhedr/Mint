@@ -45,7 +45,7 @@ public class VirtualDeviceConfig {
                 "emulator-5554",
                 "14",
                 "pixel7pro_api34",
-                "4723",
+                "4723",  // ← Keep this
                 "emulator-5554",
                 "sdk_gphone64_x86_64",
                 "Google",
@@ -58,7 +58,7 @@ public class VirtualDeviceConfig {
                 "emulator-5556",
                 "14",
                 "pixel8_api34",
-                "4723",
+                "4724",  // ← Change to 4724
                 "emulator-5556",
                 "sdk_gphone64_x86_64",
                 "Google",
@@ -71,7 +71,7 @@ public class VirtualDeviceConfig {
                 "emulator-5558",
                 "14",
                 "pixel9_api34",
-                "4723",
+                "4725",  // ← Change to 4725
                 "emulator-5558",
                 "sdk_gphone64_x86_64",
                 "Google",
@@ -90,7 +90,8 @@ public class VirtualDeviceConfig {
 
     public static String getAppiumServerUrl(String deviceId) {
         DeviceInfo device = getDeviceInfo(deviceId);
-        return "http://127.0.0.1:" + device.systemPort;
+        // For Appium 2.x, use root endpoint
+        return "http://127.0.0.1:" + device.systemPort + "/";
     }
 
     public static void addDevice(String deviceId, DeviceInfo deviceInfo) {

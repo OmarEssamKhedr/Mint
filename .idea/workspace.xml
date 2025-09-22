@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="30765d5f-9abf-4ac5-b347-9fa260bdf359" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/config/VirtualDeviceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/config/VirtualDeviceConfig.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "OmarEssamKhedr"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/OmarEssamKhedr/Mint.git",
+    "accountId": "de343774-054f-4e71-a9a6-6836ebec52cc"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="334A8iLSLzE1LC0nhac2NtllOAs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG./media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/multi-device-testng.xml.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "preferences.keymap"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="/media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/multi-device-testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Ciye" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/Ciye/src/test/resources/multi-device-testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG./media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/multi-device-testng.xml" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30765d5f-9abf-4ac5-b347-9fa260bdf359" name="Changes" comment="" />
+      <created>1758565812936</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758565812936</updated>
+    </task>
+    <servers />
+  </component>
+</project>
