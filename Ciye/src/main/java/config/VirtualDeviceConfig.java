@@ -40,43 +40,43 @@ public class VirtualDeviceConfig {
     private static final Map<String, DeviceInfo> DEVICES = new HashMap<>();
 
     static {
-        // Device 1: Pixel 7 Pro API 34
+        // Device 1: emulator-5554
         DEVICES.put("device1", new DeviceInfo(
                 "emulator-5554",
-                "14",
-                "pixel7pro_api34",
-                "4723",  // ← Keep this
+                "16",  // Correct Android version from your devices
+                "Pixel7Pro",
+                "4723",
                 "emulator-5554",
                 "sdk_gphone64_x86_64",
                 "Google",
-                "160",
-                "320x640"
+                "560",
+                "1440x3120"
         ));
 
-        // Device 2: Pixel 8 API 34
+        // Device 2: emulator-5556
         DEVICES.put("device2", new DeviceInfo(
                 "emulator-5556",
-                "14",
-                "pixel8_api34",
-                "4724",  // ← Change to 4724
+                "16",  // Correct Android version from your devices
+                "Pixel8",
+                "4724",
                 "emulator-5556",
                 "sdk_gphone64_x86_64",
                 "Google",
-                "160",
-                "320x640"
+                "420",
+                "1080x2400"
         ));
 
-        // Device 3: Pixel 9 API 34
+        // Device 3: emulator-5558
         DEVICES.put("device3", new DeviceInfo(
                 "emulator-5558",
-                "14",
-                "pixel9_api34",
-                "4725",  // ← Change to 4725
+                "16",  // Correct Android version from your devices
+                "Pixel9",
+                "4725",
                 "emulator-5558",
                 "sdk_gphone64_x86_64",
                 "Google",
-                "160",
-                "320x640"
+                "420",
+                "1080x2424"
         ));
     }
 

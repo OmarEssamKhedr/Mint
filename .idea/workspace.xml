@@ -4,8 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30765d5f-9abf-4ac5-b347-9fa260bdf359" name="Changes" comment="3">
+    <list default="true" id="30765d5f-9abf-4ac5-b347-9fa260bdf359" name="Changes" comment="3.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/config/VirtualDeviceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/config/VirtualDeviceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/appium" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/appium" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/appium-docs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/appium-docs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/package-changed" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/package-changed" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@appium/docutils/node_modules/.bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/docutils/node_modules/.bin/resolve" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@appium/docutils/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/docutils/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/crc32" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/crc32" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/glob" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/glob" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/ncp" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/ncp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/node-which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/resolve" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/uuid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/archiver-utils/node_modules/.bin/glob" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/archiver-utils/node_modules/.bin/glob" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/cross-spawn/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/cross-spawn/node_modules/.bin/node-which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/normalize-package-data/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/normalize-package-data/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/appium-docs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/appium-docs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/crc32" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/crc32" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/glob" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/glob" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/ncp" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/ncp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/node-which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/resolve" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/uuid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/appium" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/appium" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/archiver-utils/node_modules/.bin/glob" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/archiver-utils/node_modules/.bin/glob" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/cross-spawn/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/cross-spawn/node_modules/.bin/node-which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/normalize-package-data/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/normalize-package-data/node_modules/.bin/semver" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,22 +45,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "OmarEssamKhedr"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;OmarEssamKhedr&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/OmarEssamKhedr/Mint.git",
-    "accountId": "de343774-054f-4e71-a9a6-6836ebec52cc"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/OmarEssamKhedr/Mint.git&quot;,
+    &quot;accountId&quot;: &quot;de343774-054f-4e71-a9a6-6836ebec52cc&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="334A8iLSLzE1LC0nhac2NtllOAs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,12 +73,24 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "TestNG./media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/multi-device-testng.xml.executor": "Run",
+    "TestNG.E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/parallel-testng.xml.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint",
     "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/parallel-testng.xml">
+    <configuration name="E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/parallel-testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Ciye" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/Ciye/src/test/resources/parallel-testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="/media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/multi-device-testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Ciye" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/Ciye/src/test/resources/multi-device-testng.xml" />
@@ -61,6 +103,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/parallel-testng.xml" />
         <item itemvalue="TestNG./media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/multi-device-testng.xml" />
       </list>
     </recent_temporary>
@@ -81,11 +124,20 @@
       <option name="project" value="LOCAL" />
       <updated>1758566199652</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="3.1">
+      <option name="closed" value="true" />
+      <created>1758567617691</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1758567617691</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="3" />
-    <option name="LAST_COMMIT_MESSAGE" value="3" />
+    <MESSAGE value="3.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.1" />
   </component>
 </project>
