@@ -25,7 +25,6 @@ public class LogUtils {
         String timestamp = LocalDateTime.now().format(formatter);
         String logMessage = String.format("[%s] [INFO] %s", timestamp, message);
         logger.info(logMessage);
-        Allure.step(message);
     }
 
     /**

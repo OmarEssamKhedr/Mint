@@ -22,7 +22,7 @@ public class WaitUtils {
 
     // Replace the getDriver() method:
     private static AndroidDriver getDriver() {
-        return ThreadLocalDriverManager.getDriver(); // Changed from DriverManager
+        return DriverManager.getInstance().getDriver();
     }
 
 

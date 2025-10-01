@@ -1,14 +1,12 @@
 package utils;
 
 import driver.DriverManager;
-import driver.ThreadLocalDriverManager;
 import io.qameta.allure.Allure;
-import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
 import java.io.ByteArrayInputStream;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -28,18 +26,22 @@ public class ScreenshotUtils {
     /**
      * Take screenshot and attach to Allure report
      */
-    @Attachment(value = "Screenshot", type = "image/png")
+
     public static byte[] takeScreenshot() {
         try {
-            TakesScreenshot screenshot = ThreadLocalDriverManager.getDriver(); // Changed from DriverManager
+            TakesScreenshot screenshot = (TakesScreenshot) DriverManager.getInstance().getDriver();
             byte[] screenshotBytes = screenshot.getScreenshotAs(OutputType.BYTES);
 
-            String deviceId = driver.ThreadLocalDriverManager.getCurrentDeviceId();
-            LogUtils.info("Screenshot captured successfully for device: " + deviceId);
+            LogUtils.info("Screenshot captured successfully - Size: " + screenshotBytes.length + " bytes");
+
+            // Attach directly to Allure
+            Allure.addAttachment("Screenshot", "image/png", new ByteArrayInputStream(screenshotBytes), ".png");
+
             return screenshotBytes;
 
         } catch (Exception e) {
             LogUtils.error("Failed to capture screenshot: " + e.getMessage());
+            e.printStackTrace();
             return new byte[0];
         }
     }
@@ -88,39 +90,10 @@ public class ScreenshotUtils {
             // Also save as file for backup
             takeScreenshotAsFile(testName + "_FAILURE");
 
-            // Attach to Allure report
-            Allure.addAttachment(
-                    "Failure Screenshot - " + testName,
-                    "image/png",
-                    new ByteArrayInputStream(screenshotBytes),
-                    ".png"
-            );
-
             LogUtils.info("Failure screenshot captured for test: " + testName);
 
         } catch (Exception e) {
             LogUtils.error("Failed to capture failure screenshot: " + e.getMessage());
-        }
-    }
-
-    /**
-     * Take screenshot for test step
-     */
-    public static void captureStepScreenshot(String stepName) {
-        try {
-            byte[] screenshotBytes = takeScreenshot();
-
-            Allure.addAttachment(
-                    "Step Screenshot - " + stepName,
-                    "image/png",
-                    new ByteArrayInputStream(screenshotBytes),
-                    ".png"
-            );
-
-            LogUtils.info("Step screenshot captured: " + stepName);
-
-        } catch (Exception e) {
-            LogUtils.error("Failed to capture step screenshot: " + e.getMessage());
         }
     }
 }

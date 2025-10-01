@@ -11,8 +11,14 @@ public class TestData {
     // Valid User Credentials
     public static class ValidUser {
         public static final String EMAIL = "maani@gmail.com";
-        public static final String PASSWORD = "11111111";
+        public static final String PASSWORD = "Maani12*12";
         public static final String PROFILE_INITIALS = "MM";
+    }
+
+    // Valid User Names
+    public static class Names {
+        public static final String FirstName = "Mohamedo";
+        public static final String LastName = "Maanio";
     }
 
     // Test User for Account Deletion

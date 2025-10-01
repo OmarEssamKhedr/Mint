@@ -39,9 +39,10 @@ public class AllureUtils {
     public static void addEnvironmentInfo() {
         Allure.addAttachment("Test Environment", "text/plain",
                 "App Package: co.ciye.swim\n" +
-                        "Device: samsung SM-S928B\n" +
-                        "Platform: Android 15.0\n" +
-                        "Automation: UiAutomator2"
+                        "Device: emulator-5554 (Pixel7Pro)\n" +
+                        "Platform: Android 16\n" +
+                        "Automation: UiAutomator2\n" +
+                        "AVD: Pixel7Pro"
         );
     }
 

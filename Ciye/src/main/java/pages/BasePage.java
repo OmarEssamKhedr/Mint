@@ -1,6 +1,6 @@
 package pages;
 
-import driver.ThreadLocalDriverManager;
+import driver.DriverManager;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
@@ -19,7 +19,7 @@ public class BasePage {
     protected AndroidDriver driver;
 
     public BasePage() {
-        this.driver = ThreadLocalDriverManager.getDriver(); // Changed from DriverManager
+        this.driver = DriverManager.getInstance().getDriver();
     }
 
     /**

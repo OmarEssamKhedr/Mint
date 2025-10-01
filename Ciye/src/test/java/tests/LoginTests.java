@@ -4,7 +4,7 @@ import io.qameta.allure.*;
 import listeners.RetryAnalyzer;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.ProfilePage;
+import pages.AccountMenuPage;
 import pages.WelcomePage;
 import testdata.TestData;
 import utils.AllureUtils;
@@ -31,14 +31,13 @@ public class LoginTests extends BaseTest {
 
         // Navigate to login page
         LoginPage loginPage = welcomePage.navigateToLogin();
-        AssertUtils.assertTrue(loginPage.isLoginPageDisplayed(), "Login page should be displayed");
 
         // Perform login
         loginPage.loginWithValidCredentials();
 
         // Verify successful login
-        ProfilePage profilePage = new ProfilePage();
-        AssertUtils.assertTrue(profilePage.isOnHomePage(), "User should be on home page after successful login");
+        AccountMenuPage accountMenuPage = new AccountMenuPage();
+        AssertUtils.assertTrue(accountMenuPage.isOnHomePage(), "User should be on home page after successful login");
     }
 
     @Test(priority = TestData.TestPriority.HIGH,

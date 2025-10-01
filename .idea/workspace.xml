@@ -4,43 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30765d5f-9abf-4ac5-b347-9fa260bdf359" name="Changes" comment="3.1">
+    <list default="true" id="30765d5f-9abf-4ac5-b347-9fa260bdf359" name="Changes" comment="Windows11">
+      <change afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/CreateAccountPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/Personal_InformationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ciye/src/test/java/tests/Personal_InformationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/config/DeviceCapabilityFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/config/DeviceCapabilityFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/config/VirtualDeviceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/config/VirtualDeviceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/appium" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/appium" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/appium-docs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/appium-docs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/package-changed" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/package-changed" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@appium/docutils/node_modules/.bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/docutils/node_modules/.bin/resolve" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@appium/docutils/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/docutils/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/crc32" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/crc32" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/glob" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/glob" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/ncp" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/ncp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/node-which" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/resolve" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/.bin/uuid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/archiver-utils/node_modules/.bin/glob" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/archiver-utils/node_modules/.bin/glob" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/cross-spawn/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/cross-spawn/node_modules/.bin/node-which" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/normalize-package-data/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@appium/support/node_modules/normalize-package-data/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/appium-docs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/appium-docs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/crc32" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/crc32" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/glob" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/glob" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/ncp" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/ncp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/node-which" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/resolve" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/uuid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/.bin/yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/appium" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/appium" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/archiver-utils/node_modules/.bin/glob" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/archiver-utils/node_modules/.bin/glob" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/cross-spawn/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/cross-spawn/node_modules/.bin/node-which" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/normalize-package-data/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/appium-uiautomator2-driver/node_modules/normalize-package-data/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/pages/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/AccountMenuPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/testdata/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/testdata/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/utils/AllureUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/utils/AllureUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/utils/LogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/utils/LogUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/utils/ScreenshotUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/utils/ScreenshotUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/utils/WaitUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/utils/WaitUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/test/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/DataDrivenParallelTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/test/java/tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/ParallelBaseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/ParallelLoginTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/ProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/test/java/tests/AccountMenuTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/test/resources/multi-device-testng.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/test/resources/parallel-testng.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/test/resources/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,7 +54,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/OmarEssamKhedr/Mint.git&quot;,
-    &quot;accountId&quot;: &quot;de343774-054f-4e71-a9a6-6836ebec52cc&quot;
+    &quot;accountId&quot;: &quot;3090965c-6628-4aba-b0d3-7a7fa7d30dcd&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -72,29 +72,131 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "TestNG./media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/multi-device-testng.xml.executor": "Run",
     "TestNG.E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/parallel-testng.xml.executor": "Run",
+    "TestNG.LoginTests.executor": "Run",
+    "TestNG.LoginTests.testEmptyPassword.executor": "Run",
+    "TestNG.LoginTests.testInvalidEmail.executor": "Run",
+    "TestNG.LoginTests.testValidLogin.executor": "Run",
+    "TestNG.Personal_InformationTest.OpenPersonalInformationPage.executor": "Run",
+    "TestNG.Personal_InformationTest.executor": "Run",
+    "TestNG.Personal_InformationTest.testAccessBirthdayPicker.executor": "Run",
+    "TestNG.Personal_InformationTest.testAccessGenderPicker.executor": "Run",
+    "TestNG.Personal_InformationTest.testAccessNameEditPage.executor": "Run",
+    "TestNG.Personal_InformationTest.testAccessPersonalInformationPage.executor": "Run",
+    "TestNG.Personal_InformationTest.testAccessYearPicker.executor": "Run",
+    "TestNG.Personal_InformationTest.testBothFieldsEmptyValidation.executor": "Run",
+    "TestNG.Personal_InformationTest.testCancelBirthdaySelection.executor": "Run",
+    "TestNG.Personal_InformationTest.testCancelDaySelection.executor": "Run",
+    "TestNG.Personal_InformationTest.testCancelMonthSelection.executor": "Run",
+    "TestNG.Personal_InformationTest.testCancelNameEdit.executor": "Run",
+    "TestNG.Personal_InformationTest.testCancelYearSelection.executor": "Run",
+    "TestNG.Personal_InformationTest.testClearFirstName.executor": "Run",
+    "TestNG.Personal_InformationTest.testEditBothNames.executor": "Run",
+    "TestNG.Personal_InformationTest.testEditFirstName.executor": "Run",
+    "TestNG.Personal_InformationTest.testEditFirstNameSuccessfully.executor": "Run",
+    "TestNG.Personal_InformationTest.testEditLastName.executor": "Run",
+    "TestNG.Personal_InformationTest.testEmptyFirstNameValidation.executor": "Run",
+    "TestNG.Personal_InformationTest.testEmptyLastNameValidation.executor": "Run",
+    "TestNG.Personal_InformationTest.testMinimumAgeValidation.executor": "Run",
+    "TestNG.Personal_InformationTest.testMultipleNameEdits.executor": "Run",
+    "TestNG.Personal_InformationTest.testPersonalInformationDataDisplay.executor": "Run",
+    "TestNG.Personal_InformationTest.testSelectBirthYear.executor": "Run",
+    "TestNG.Personal_InformationTest.testSelectCompleteBirthday.executor": "Run",
+    "TestNG.Personal_InformationTest.testSelectGender.executor": "Run",
+    "TestNG.Personal_InformationTest.testUserLogout.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint",
     "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/parallel-testng.xml">
-    <configuration name="E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/parallel-testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.Personal_InformationTest.testSelectGender">
+    <configuration name="Personal_InformationTest.testAccessGenderPicker" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Ciye" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/Ciye/src/test/resources/parallel-testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.Personal_InformationTest" />
+      <option name="METHOD_NAME" value="testAccessGenderPicker" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="/media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/multi-device-testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Personal_InformationTest.testCancelDaySelection" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Ciye" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/Ciye/src/test/resources/multi-device-testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.Personal_InformationTest" />
+      <option name="METHOD_NAME" value="testCancelDaySelection" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Personal_InformationTest.testCancelYearSelection" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Ciye" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.Personal_InformationTest" />
+      <option name="METHOD_NAME" value="testCancelYearSelection" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Personal_InformationTest.testMinimumAgeValidation" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Ciye" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.Personal_InformationTest" />
+      <option name="METHOD_NAME" value="testMinimumAgeValidation" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Personal_InformationTest.testSelectGender" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Ciye" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.Personal_InformationTest" />
+      <option name="METHOD_NAME" value="testSelectGender" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -103,8 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/parallel-testng.xml" />
-        <item itemvalue="TestNG./media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/multi-device-testng.xml" />
+        <item itemvalue="TestNG.Personal_InformationTest.testSelectGender" />
+        <item itemvalue="TestNG.Personal_InformationTest.testAccessGenderPicker" />
+        <item itemvalue="TestNG.Personal_InformationTest.testMinimumAgeValidation" />
+        <item itemvalue="TestNG.Personal_InformationTest.testCancelDaySelection" />
+        <item itemvalue="TestNG.Personal_InformationTest.testCancelYearSelection" />
       </list>
     </recent_temporary>
   </component>
@@ -132,12 +237,24 @@
       <option name="project" value="LOCAL" />
       <updated>1758567617691</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Windows11">
+      <option name="closed" value="true" />
+      <created>1758672150685</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758672150685</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="startingDirectory" value="E:\Omar\Testing\Manual Testing\Zetaton\9Sea\Mint\Ciye" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="3" />
     <MESSAGE value="3.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.1" />
+    <MESSAGE value="Windows11" />
+    <option name="LAST_COMMIT_MESSAGE" value="Windows11" />
   </component>
 </project>

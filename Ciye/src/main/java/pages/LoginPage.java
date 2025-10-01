@@ -19,10 +19,10 @@ public class LoginPage extends BasePage {
     // Page Elements
     private final By emailField = AppiumBy.androidUIAutomator("new UiSelector().text(\"Email\")");
     private final By passwordField = AppiumBy.androidUIAutomator("new UiSelector().text(\"Password\")");
-    private final By loginButton = AppiumBy.xpath("//android.view.ViewGroup[@content-desc='Log in']/android.view.ViewGroup");
+    private final By loginButton = By.xpath("//android.view.ViewGroup[@content-desc='Log in']/android.view.ViewGroup");
 
     // Error Message Elements
-    private final By emptyEmailError = AppiumBy.xpath("//android.widget.TextView[@text='Please enter a valid email address']");
+    private final By emptyEmailError = By.xpath("//android.widget.TextView[@text='Please enter a valid email address']");
     private final By emptyFieldsError = AppiumBy.androidUIAutomator("new UiSelector().textContains(\"Please fill in all fields!\")");
     private final By wrongCredentialsError = AppiumBy.androidUIAutomator(
             "new UiSelector().className(\"android.widget.TextView\").text(\"Could not login. Wrong password or username.\")"
@@ -44,7 +44,7 @@ public class LoginPage extends BasePage {
      */
     @Step("Enter email: {email}")
     public LoginPage enterEmail(String email) {
-        AllureUtils.step("Entering email address");
+        AllureUtils.step("Entering email: " + (email.isEmpty() ? "[EMPTY]" : email));
         enterText(emailField, email);
         return this;
     }
@@ -54,7 +54,8 @@ public class LoginPage extends BasePage {
      */
     @Step("Enter password")
     public LoginPage enterPassword(String password) {
-        AllureUtils.step("Entering password");
+        String displayPassword = password.isEmpty() ? "[EMPTY]" : password;
+        AllureUtils.step("Entering password: " + displayPassword);
         enterText(passwordField, password);
         return this;
     }
@@ -74,7 +75,9 @@ public class LoginPage extends BasePage {
      */
     @Step("Login with email: {email}")
     public void login(String email, String password) {
-        AllureUtils.step("Performing login with provided credentials");
+        String displayPassword = password.isEmpty() ? "[EMPTY]" : password;
+        AllureUtils.step("Performing login - Email: " + (email.isEmpty() ? "[EMPTY]" : email) + ", Password: " + displayPassword);
+
         enterEmail(email);
         enterPassword(password);
         clickLogin();
@@ -109,7 +112,7 @@ public class LoginPage extends BasePage {
     public boolean isEmptyFieldsErrorDisplayed() {
         AllureUtils.step("Checking for empty fields validation error");
         try {
-            return WaitUtils.waitForElementVisible(emptyEmailError, 5).isDisplayed();
+            return WaitUtils.waitForElementVisible(emptyFieldsError, 5).isDisplayed();
         } catch (Exception e) {
             return false;
         }

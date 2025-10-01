@@ -40,10 +40,10 @@ public class VirtualDeviceConfig {
     private static final Map<String, DeviceInfo> DEVICES = new HashMap<>();
 
     static {
-        // Device 1: emulator-5554
+        // Keep only this device:
         DEVICES.put("device1", new DeviceInfo(
                 "emulator-5554",
-                "16",  // Correct Android version from your devices
+                "16",
                 "Pixel7Pro",
                 "4723",
                 "emulator-5554",
@@ -51,32 +51,6 @@ public class VirtualDeviceConfig {
                 "Google",
                 "560",
                 "1440x3120"
-        ));
-
-        // Device 2: emulator-5556
-        DEVICES.put("device2", new DeviceInfo(
-                "emulator-5556",
-                "16",  // Correct Android version from your devices
-                "Pixel8",
-                "4724",
-                "emulator-5556",
-                "sdk_gphone64_x86_64",
-                "Google",
-                "420",
-                "1080x2400"
-        ));
-
-        // Device 3: emulator-5558
-        DEVICES.put("device3", new DeviceInfo(
-                "emulator-5558",
-                "16",  // Correct Android version from your devices
-                "Pixel9",
-                "4725",
-                "emulator-5558",
-                "sdk_gphone64_x86_64",
-                "Google",
-                "420",
-                "1080x2424"
         ));
     }
 

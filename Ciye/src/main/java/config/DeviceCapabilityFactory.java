@@ -46,15 +46,4 @@ public class DeviceCapabilityFactory {
 
         return options;
     }
-
-    public static UiAutomator2Options[] createAllCapabilities() {
-        String[] deviceIds = VirtualDeviceConfig.getAllDeviceIds();
-        UiAutomator2Options[] allCapabilities = new UiAutomator2Options[deviceIds.length];
-
-        for (int i = 0; i < deviceIds.length; i++) {
-            allCapabilities[i] = createCapabilities(deviceIds[i]);
-        }
-
-        return allCapabilities;
-    }
 }
