@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Personal Information Test Suite">
+    <test name="Personal Information Tests - Sequential">
+        <classes>
+            <class name="tests.Personal_InformationTest">
+                <methods>
+                    <include name="testAccessPersonalInformationPage"/>
+                    <include name="testPersonalInformationDataDisplay"/>
+                    <include name="testAccessNameEditPage"/>
+                    <include name="testEditFirstName"/>
+                    <include name="testEditLastName"/>
+                    <include name="testEditBothNames"/>
+                    <include name="testCancelNameEdit"/>
+                    <include name="testClearFirstName"/>
+                    <include name="testMultipleNameEdits"/>
+                    <include name="testEmptyFirstNameValidation"/>
+                    <include name="testEmptyLastNameValidation"/>
+                    <include name="testBothFieldsEmptyValidation"/>
+                    <include name="testAccessYearPicker"/>
+                    <include name="testSelectCompleteBirthday"/>
+                    <include name="testCancelYearSelection"/>
+                    <include name="testCancelMonthSelection"/>
+                    <include name="testCancelDaySelection"/>
+                    <include name="testMinimumAgeValidation"/>
+                    <include name="testAccessGenderPicker"/>
+                    <include name="testSelectMaleGender"/>
+                    <include name="testSelectFemaleGender"/>
+                    <include name="testSelectPreferNotToSayGender"/>
+                    <include name="testCancelGenderSelection"/>
+                    <include name="testAccessPhotoOptionsModal"/>
+                    <include name="testVerifyPhotoOptionsDisplayed"/>
+                    <include name="testRemoveOptionAppearsWithPhoto"/>
+                    <include name="testCancelPhotoEdit"/>
+                    <include name="testVerifyInitialsDisplay"/>
+                    <include name="testInitialsChangeWithName"/>
+                    <include name="testRemovePhotoInitialsReturn"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

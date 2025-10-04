@@ -61,6 +61,7 @@ public class AccountMenuTests extends BaseTest {
 
         // Access profile menu
         AccountMenuPage accountMenuPage = new AccountMenuPage();
+        accountMenuPage.debugFindProfileButton();
         accountMenuPage.clickValidUserProfile();
 
         // Verify profile menu options are accessible

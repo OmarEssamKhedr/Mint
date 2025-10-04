@@ -1,6 +1,5 @@
 package tests;
 
-import io.appium.java_client.AppiumBy;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -736,16 +735,16 @@ public class Personal_InformationTest extends BaseTest {
         AllureUtils.step("Test passed: Gender picker is accessible");
     }
 
-// ==================== TEST 20: SELECT GENDER ====================
+// ==================== TEST 20: SELECT MALE GENDER ====================
 
     @Test(priority = TestData.TestPriority.HIGH,
-            description = "Verify user can select gender")
+            description = "Verify user can select Male gender")
     @Story("Gender Editing")
     @Severity(SeverityLevel.CRITICAL)
-    @Description("User selects a gender option and confirms selection")
+    @Description("User selects Male gender and verifies it appears correctly on personal info page")
     @TmsLink("TC-PI-020")
-    public void testSelectGender() {
-        AllureUtils.step("Starting test: Select Gender");
+    public void testSelectMaleGender() {
+        AllureUtils.step("Starting test: Select Male Gender");
 
         LoginPage loginPage = welcomePage.navigateToLogin();
         loginPage.loginWithValidCredentials();
@@ -757,9 +756,50 @@ public class Personal_InformationTest extends BaseTest {
         String originalGender = personalInfoPage.getUserGender();
         AllureUtils.addParameter("Original Gender", originalGender);
 
+        // Select Male
+        personalInfoPage.clickGenderField();
+        personalInfoPage.selectGender("Male");
+
+        // Verify Male is displayed on personal info page
+        String updatedGender = personalInfoPage.getUserGender();
+        AllureUtils.addParameter("Updated Gender", updatedGender);
+
+        AssertUtils.assertTrue(updatedGender.contains("Male"),
+                "Gender should be updated to Male");
+
+        // Restore original gender
+        personalInfoPage.clickGenderField();
+        personalInfoPage.selectGender(originalGender);
+
+        AllureUtils.step("✅ Test passed: Male gender selected and verified successfully");
+    }
+
+// ==================== TEST 21: SELECT FEMALE GENDER ====================
+
+    @Test(priority = TestData.TestPriority.HIGH,
+            description = "Verify user can select Female gender")
+    @Story("Gender Editing")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("User selects Female gender and verifies it appears correctly on personal info page")
+    @TmsLink("TC-PI-022")
+    public void testSelectFemaleGender() {
+        AllureUtils.step("Starting test: Select Female Gender");
+
+        LoginPage loginPage = welcomePage.navigateToLogin();
+        loginPage.loginWithValidCredentials();
+
+        AccountMenuPage accountMenuPage = new AccountMenuPage();
+        accountMenuPage.clickValidUserProfile();
+        Personal_InformationPage personalInfoPage = accountMenuPage.clickPersonalInformation();
+
+        String originalGender = personalInfoPage.getUserGender();
+        AllureUtils.addParameter("Original Gender", originalGender);
+
+        // Select Female
         personalInfoPage.clickGenderField();
         personalInfoPage.selectGender("Female");
 
+        // Verify Female is displayed on personal info page
         String updatedGender = personalInfoPage.getUserGender();
         AllureUtils.addParameter("Updated Gender", updatedGender);
 
@@ -770,10 +810,48 @@ public class Personal_InformationTest extends BaseTest {
         personalInfoPage.clickGenderField();
         personalInfoPage.selectGender(originalGender);
 
-        AllureUtils.step("Test passed: Gender selection works correctly");
+        AllureUtils.step("✅ Test passed: Female gender selected and verified successfully");
     }
 
-// ==================== TEST 21: CANCEL GENDER SELECTION ====================
+// ==================== TEST 22: SELECT PREFER NOT TO SAY GENDER ====================
+
+    @Test(priority = TestData.TestPriority.HIGH,
+            description = "Verify user can select Prefer Not to Say gender")
+    @Story("Gender Editing")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("User selects Prefer Not to Say and verifies it appears as Other on personal info page")
+    @TmsLink("TC-PI-023")
+    public void testSelectPreferNotToSayGender() {
+        AllureUtils.step("Starting test: Select Prefer Not to Say Gender");
+
+        LoginPage loginPage = welcomePage.navigateToLogin();
+        loginPage.loginWithValidCredentials();
+
+        AccountMenuPage accountMenuPage = new AccountMenuPage();
+        accountMenuPage.clickValidUserProfile();
+        Personal_InformationPage personalInfoPage = accountMenuPage.clickPersonalInformation();
+
+        String originalGender = personalInfoPage.getUserGender();
+        AllureUtils.addParameter("Original Gender", originalGender);
+
+        // Select Prefer Not to Say
+        personalInfoPage.clickGenderField();
+        personalInfoPage.selectGender("Prefer Not to Say");
+
+        // Verify it shows as "Other" on personal info page
+        String updatedGender = personalInfoPage.getUserGender();
+        AllureUtils.addParameter("Updated Gender", updatedGender);
+
+        AssertUtils.assertTrue(updatedGender.contains("Other"),
+                "Gender should be displayed as 'Other' when Prefer Not to Say is selected");
+
+        // Restore original gender
+        personalInfoPage.clickGenderField();
+        personalInfoPage.selectGender(originalGender);
+
+        AllureUtils.step("✅ Test passed: Prefer Not to Say selected and verified as Other successfully");
+    }
+// ==================== TEST 23: CANCEL GENDER SELECTION ====================
 
     @Test(priority = TestData.TestPriority.MEDIUM,
             description = "Verify user can cancel gender selection")
@@ -803,5 +881,292 @@ public class Personal_InformationTest extends BaseTest {
                 "Gender should remain unchanged after cancel");
 
         AllureUtils.step("Test passed: Cancel gender selection works correctly");
+    }
+    // ==================== TEST 24: ACCESS PHOTO OPTIONS MODAL ====================
+
+    @Test(priority = TestData.TestPriority.HIGH,
+            description = "Verify user can access photo options modal")
+    @Story("Profile Picture Management")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("User clicks on profile picture and photo options modal appears")
+    @TmsLink("TC-PI-024")
+    public void testAccessPhotoOptionsModal() {
+        AllureUtils.step("Starting test: Access Photo Options Modal");
+
+        LoginPage loginPage = welcomePage.navigateToLogin();
+        loginPage.loginWithValidCredentials();
+
+        AccountMenuPage accountMenuPage = new AccountMenuPage();
+        accountMenuPage.clickValidUserProfile();
+        Personal_InformationPage personalInfoPage = accountMenuPage.clickPersonalInformation();
+
+        // Click profile picture to edit
+        personalInfoPage.clickEditProfilePicture();
+
+        // Verify photo options modal opened
+        AssertUtils.assertTrue(personalInfoPage.isPhotoOptionsDisplayed(),
+                "Photo options modal should be displayed");
+
+        // Cancel to close modal
+        personalInfoPage.cancelPhotoEdit();
+
+        AllureUtils.step("✅ Test passed: Photo options modal is accessible");
+    }
+
+// ==================== TEST 25: VERIFY ALL PHOTO OPTIONS DISPLAYED ====================
+
+    @Test(priority = TestData.TestPriority.HIGH,
+            description = "Verify all photo options are displayed in modal")
+    @Story("Profile Picture Management")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Validates that Take a photo, Camera roll, and Cancel options are present")
+    @TmsLink("TC-PI-025")
+    public void testVerifyPhotoOptionsDisplayed() {
+        AllureUtils.step("Starting test: Verify All Photo Options Displayed");
+
+        LoginPage loginPage = welcomePage.navigateToLogin();
+        loginPage.loginWithValidCredentials();
+
+        AccountMenuPage accountMenuPage = new AccountMenuPage();
+        accountMenuPage.clickValidUserProfile();
+        Personal_InformationPage personalInfoPage = accountMenuPage.clickPersonalInformation();
+
+        personalInfoPage.clickEditProfilePicture();
+
+        // Verify all standard options are present
+        AssertUtils.assertTrue(personalInfoPage.isTakePhotoOptionDisplayed(),
+                "Take a photo option should be displayed");
+        AssertUtils.assertTrue(personalInfoPage.isCameraRollOptionDisplayed(),
+                "Camera roll option should be displayed");
+        AssertUtils.assertTrue(personalInfoPage.isCancelOptionDisplayed(),
+                "Cancel button should be displayed");
+
+        AllureUtils.addParameter("Take Photo Option", "Displayed");
+        AllureUtils.addParameter("Camera Roll Option", "Displayed");
+        AllureUtils.addParameter("Cancel Button", "Displayed");
+
+        personalInfoPage.cancelPhotoEdit();
+
+        AllureUtils.step("✅ Test passed: All photo options are displayed");
+    }
+
+// ==================== TEST 26: VERIFY REMOVE OPTION WHEN PHOTO EXISTS ====================
+
+    @Test(priority = TestData.TestPriority.HIGH,
+            description = "Verify Remove photo option appears when user has a photo")
+    @Story("Profile Picture Management")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Remove current photo option should only appear when user has a profile photo")
+    @TmsLink("TC-PI-026")
+    public void testRemoveOptionAppearsWithPhoto() {
+        AllureUtils.step("Starting test: Verify Remove Option When Photo Exists");
+
+        LoginPage loginPage = welcomePage.navigateToLogin();
+        loginPage.loginWithValidCredentials();
+
+        AccountMenuPage accountMenuPage = new AccountMenuPage();
+        accountMenuPage.clickValidUserProfile();
+        Personal_InformationPage personalInfoPage = accountMenuPage.clickPersonalInformation();
+
+        // Check if user has photo
+        boolean hasPhoto = personalInfoPage.hasProfilePhoto();
+        AllureUtils.addParameter("User Has Photo", String.valueOf(hasPhoto));
+
+        if (hasPhoto) {
+            // If user has photo, Remove option should be visible
+            personalInfoPage.clickEditProfilePicture();
+            AssertUtils.assertTrue(personalInfoPage.isRemovePhotoOptionDisplayed(),
+                    "Remove photo option should be displayed when user has a photo");
+            personalInfoPage.cancelPhotoEdit();
+            AllureUtils.step("✅ Test passed: Remove option appears when photo exists");
+        } else {
+            // If user has no photo, Remove option should NOT be visible
+            personalInfoPage.clickEditProfilePicture();
+            AssertUtils.assertFalse(personalInfoPage.isRemovePhotoOptionDisplayed(),
+                    "Remove photo option should NOT be displayed when user has no photo");
+            personalInfoPage.cancelPhotoEdit();
+            AllureUtils.step("✅ Test passed: Remove option hidden when no photo exists");
+        }
+    }
+
+// ==================== TEST 27: CANCEL PHOTO EDIT ====================
+
+    @Test(priority = TestData.TestPriority.MEDIUM,
+            description = "Verify user can cancel photo editing")
+    @Story("Profile Picture Management")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("User opens photo options modal but cancels without making changes")
+    @TmsLink("TC-PI-027")
+    public void testCancelPhotoEdit() {
+        AllureUtils.step("Starting test: Cancel Photo Edit");
+
+        LoginPage loginPage = welcomePage.navigateToLogin();
+        loginPage.loginWithValidCredentials();
+
+        AccountMenuPage accountMenuPage = new AccountMenuPage();
+        accountMenuPage.clickValidUserProfile();
+        Personal_InformationPage personalInfoPage = accountMenuPage.clickPersonalInformation();
+
+        // Store initial state
+        String initialsBefore = personalInfoPage.getProfileInitials();
+        AllureUtils.addParameter("Initials Before", initialsBefore);
+
+        // Open photo options and cancel
+        personalInfoPage.clickEditProfilePicture();
+        personalInfoPage.cancelPhotoEdit();
+
+        // Verify back on personal info page
+        AssertUtils.assertTrue(personalInfoPage.isPersonalInformationPageDisplayed(),
+                "Should return to personal information page after cancel");
+
+        // Verify initials unchanged
+        String initialsAfter = personalInfoPage.getProfileInitials();
+        AssertUtils.assertEquals(initialsAfter, initialsBefore,
+                "Initials should remain unchanged after cancel");
+
+        AllureUtils.step("✅ Test passed: Cancel photo edit works correctly");
+    }
+
+// ==================== TEST 28: VERIFY INITIALS DISPLAY ====================
+
+    @Test(priority = TestData.TestPriority.HIGH,
+            description = "Verify user initials are displayed on profile picture")
+    @Story("Profile Picture Display")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Validates that user initials are extracted and displayed correctly")
+    @TmsLink("TC-PI-028")
+    public void testVerifyInitialsDisplay() {
+        AllureUtils.step("Starting test: Verify Initials Display");
+
+        LoginPage loginPage = welcomePage.navigateToLogin();
+        loginPage.loginWithValidCredentials();
+
+        AccountMenuPage accountMenuPage = new AccountMenuPage();
+        accountMenuPage.clickValidUserProfile();
+        Personal_InformationPage personalInfoPage = accountMenuPage.clickPersonalInformation();
+
+        // Get displayed initials
+        String initials = personalInfoPage.getProfileInitials();
+        AllureUtils.addParameter("Profile Initials", initials);
+
+        // Verify initials are not empty
+        AssertUtils.assertFalse(initials.isEmpty(),
+                "Profile initials should not be empty");
+
+        // Verify initials are 2 characters (first + last name)
+        AssertUtils.assertEquals(initials.length(), 2,
+                "Initials should be exactly 2 characters");
+
+        // Verify initials are uppercase letters
+        AssertUtils.assertTrue(initials.matches("[A-Z]{2}"),
+                "Initials should be 2 uppercase letters");
+
+        AllureUtils.step("✅ Test passed: Initials are displayed correctly");
+    }
+
+// ==================== TEST 29: VERIFY INITIALS CHANGE WITH NAME ====================
+
+    @Test(priority = TestData.TestPriority.CRITICAL,
+            description = "Verify initials update when name is changed")
+    @Story("Profile Picture Display")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("User changes their name and initials on profile picture should update accordingly")
+    @TmsLink("TC-PI-029")
+    public void testInitialsChangeWithName() {
+        AllureUtils.step("Starting test: Verify Initials Change With Name");
+
+        LoginPage loginPage = welcomePage.navigateToLogin();
+        loginPage.loginWithValidCredentials();
+
+        AccountMenuPage accountMenuPage = new AccountMenuPage();
+        accountMenuPage.clickValidUserProfile();
+        Personal_InformationPage personalInfoPage = accountMenuPage.clickPersonalInformation();
+
+        // Store original name and initials
+        String originalFirst = personalInfoPage.getFirstName();
+        String originalLast = personalInfoPage.getLastName();
+        String originalInitials = personalInfoPage.getProfileInitials();
+
+        AllureUtils.addParameter("Original Name", originalFirst + " " + originalLast);
+        AllureUtils.addParameter("Original Initials", originalInitials);
+
+        // Change name to Test User
+        personalInfoPage.clickUserName();
+        personalInfoPage.updateFullName("Test", "User");
+        personalInfoPage.clickConfirm();
+
+        // Get new initials
+        String newInitials = personalInfoPage.getProfileInitials();
+        AllureUtils.addParameter("New Initials", newInitials);
+
+        // Verify initials changed to "TU"
+        AssertUtils.assertEquals(newInitials, "TU",
+                "Initials should change to 'TU' after changing name to Test User");
+
+        // Restore original name
+        personalInfoPage.clickUserName();
+        personalInfoPage.updateFullName(originalFirst, originalLast);
+        personalInfoPage.clickConfirm();
+
+        // Verify initials restored
+        String restoredInitials = personalInfoPage.getProfileInitials();
+        AssertUtils.assertEquals(restoredInitials, originalInitials,
+                "Initials should be restored after reverting name");
+
+        AllureUtils.step("✅ Test passed: Initials update correctly when name changes");
+    }
+
+// ==================== TEST 30: REMOVE PHOTO AND VERIFY INITIALS RETURN ====================
+
+    @Test(priority = TestData.TestPriority.CRITICAL,
+            description = "Verify initials return after removing profile photo")
+    @Story("Profile Picture Management")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("User removes profile photo and initials should be displayed again")
+    @TmsLink("TC-PI-030")
+    public void testRemovePhotoInitialsReturn() {
+        AllureUtils.step("Starting test: Remove Photo and Verify Initials Return");
+
+        LoginPage loginPage = welcomePage.navigateToLogin();
+        loginPage.loginWithValidCredentials();
+
+        AccountMenuPage accountMenuPage = new AccountMenuPage();
+        accountMenuPage.clickValidUserProfile();
+        Personal_InformationPage personalInfoPage = accountMenuPage.clickPersonalInformation();
+
+        // Check if user has a photo
+        boolean hasPhoto = personalInfoPage.hasProfilePhoto();
+        AllureUtils.addParameter("User Has Photo", String.valueOf(hasPhoto));
+
+        if (!hasPhoto) {
+            AllureUtils.step("⚠️ Test skipped: User does not have a profile photo to remove");
+            return;
+        }
+
+        // Get expected initials from current name
+        String firstName = personalInfoPage.getFirstName();
+        String lastName = personalInfoPage.getLastName();
+        String expectedInitials = firstName.substring(0, 1).toUpperCase() +
+                lastName.substring(0, 1).toUpperCase();
+        AllureUtils.addParameter("Expected Initials", expectedInitials);
+
+        // Remove the photo
+        personalInfoPage.clickEditProfilePicture();
+        personalInfoPage.clickRemovePhoto();
+
+        // Verify back on personal info page
+        AssertUtils.assertTrue(personalInfoPage.isPersonalInformationPageDisplayed(),
+                "Should return to personal information page after removing photo");
+
+        // Verify initials are now displayed
+        String displayedInitials = personalInfoPage.getProfileInitials();
+        AllureUtils.addParameter("Displayed Initials", displayedInitials);
+
+        AssertUtils.assertFalse(displayedInitials.isEmpty(),
+                "Initials should be displayed after removing photo");
+        AssertUtils.assertEquals(displayedInitials, expectedInitials,
+                "Displayed initials should match first and last name initials");
+
+        AllureUtils.step("✅ Test passed: Initials return correctly after removing photo");
     }
 }

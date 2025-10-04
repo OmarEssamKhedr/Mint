@@ -39,6 +39,33 @@ public class BasePage {
     }
 
     /**
+     * Click element immediately without long wait
+     */
+    protected void clickElementQuick(By locator) {
+        try {
+            WebElement element = WaitUtils.waitForElementVisible(locator, 3); // 3 second timeout
+            element.click();
+            LogUtils.info("Clicked element: " + locator);
+        } catch (Exception e) {
+            LogUtils.error("Quick click failed: " + e.getMessage());
+            throw e;
+        }
+    }
+    /**
+     * Click element immediately without long clickable wait
+     */
+    protected void clickElementImmediate(By locator) {
+        try {
+            WebElement element = driver.findElement(locator);
+            element.click();
+            LogUtils.info("Clicked element immediately: " + locator);
+        } catch (Exception e) {
+            LogUtils.error("Immediate click failed: " + e.getMessage());
+            throw new RuntimeException("Could not click element: " + locator, e);
+        }
+    }
+
+    /**
      * Find element and enter text
      */
     protected void enterText(By locator, String text) {
@@ -95,6 +122,19 @@ public class BasePage {
         } catch (Exception e) {
             LogUtils.error("Failed to scroll to text: " + visibleText);
             throw e;
+        }
+    }
+
+    /**
+     * Hide soft keyboard
+     */
+    protected void hideKeyboard() {
+        try {
+            driver.hideKeyboard();
+            LogUtils.info("Keyboard hidden");
+            Thread.sleep(500); // Brief wait for keyboard to disappear
+        } catch (Exception e) {
+            LogUtils.info("Keyboard was not showing or already hidden");
         }
     }
 

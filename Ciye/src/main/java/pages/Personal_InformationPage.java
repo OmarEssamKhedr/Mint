@@ -101,6 +101,21 @@ public class Personal_InformationPage extends BasePage {
             "//android.widget.TextView[@text='Confirm']/parent::android.view.ViewGroup"
     );
 
+    // ==================== PROFILE PICTURE LOCATORS ====================
+
+    // ==================== PROFILE PICTURE LOCATORS ====================
+
+    // Profile Picture on Personal Info Page
+    private final By profilePictureInitials = AppiumBy.androidUIAutomator(
+            "new UiSelector().className(\"android.view.ViewGroup\").descriptionContains(\", Edit photo\").clickable(true)"
+    );
+
+    // Photo Options Modal Buttons
+    private final By takePhotoOption = AppiumBy.accessibilityId("Take a photo");
+    private final By cameraRollOption = AppiumBy.accessibilityId("Camera roll");
+    private final By removePhotoOption = AppiumBy.accessibilityId("Remove current photo");
+    private final By cancelPhotoOption = AppiumBy.accessibilityId("Cancel");
+
     /**
      * Check if personal information page is displayed
      */
@@ -110,17 +125,6 @@ public class Personal_InformationPage extends BasePage {
         boolean isDisplayed = isElementDisplayed(personalInfoHeader) && isElementDisplayed(profilePictureEditButton);
         LogUtils.info("Personal information page displayed: " + isDisplayed);
         return isDisplayed;
-    }
-
-    /**
-     * Click profile picture to edit
-     */
-    @Step("Click profile picture to edit")
-    public Personal_InformationPage clickEditProfilePicture() {
-        AllureUtils.step("Tapping profile picture to edit");
-        clickElement(profilePictureEditButton);
-        waitForPageLoad();
-        return this;
     }
 
     /**
@@ -187,19 +191,6 @@ public class Personal_InformationPage extends BasePage {
         clickElement(backButton);
         waitForPageLoad();
         return this;
-    }
-
-    /**
-     * Check if user has profile photo
-     */
-    @Step("Check if user has profile photo")
-    public boolean hasProfilePhoto() {
-        AllureUtils.step("Checking if user has a profile photo");
-        try {
-            return WaitUtils.isElementPresent(profilePictureWithPhoto);
-        } catch (Exception e) {
-            return false;
-        }
     }
 
     /**
@@ -499,6 +490,7 @@ public class Personal_InformationPage extends BasePage {
     @Step("Click confirm button")
     public Personal_InformationPage clickConfirm() {
         AllureUtils.step("Clicking confirm button to save name changes");
+        hideKeyboard(); // Hide keyboard first
         clickElement(Names_confirmButton);
         waitForPageLoad();
         return new Personal_InformationPage();
@@ -985,5 +977,174 @@ public class Personal_InformationPage extends BasePage {
         navigateBack();
         waitForPageLoad();
         return this;
+    }
+
+// ==================== PROFILE PICTURE METHODS ====================
+
+    /**
+     * Click profile picture to edit
+     */
+    @Step("Click profile picture to edit")
+    public Personal_InformationPage clickEditProfilePicture() {
+        AllureUtils.step("Tapping profile picture to edit");
+        clickElement(profilePictureEditButton);
+        waitForPageLoad();
+        return this;
+    }
+
+    /**
+     * Get user initials from profile picture
+     * Extracts the 2-letter initials (e.g., "MM" from "MM, Edit photo")
+     */
+    @Step("Get user initials from profile picture")
+    public String getProfileInitials() {
+        AllureUtils.step("Getting user initials from profile picture");
+        try {
+            String contentDesc = getInstance().getDriver()
+                    .findElement(profilePictureInitials)
+                    .getAttribute("content-desc");
+
+            LogUtils.info("Raw content-desc for profile picture: " + contentDesc);
+
+            if (contentDesc != null && contentDesc.contains(",")) {
+                String[] parts = contentDesc.split(",", 2);
+                String initials = parts[0].trim();
+                LogUtils.info("Retrieved initials: " + initials);
+                return initials;
+            }
+
+            return "";
+        } catch (Exception e) {
+            LogUtils.error("Failed to get initials: " + e.getMessage());
+            return "";
+        }
+    }
+
+    /**
+     * Check if photo options modal is displayed
+     */
+    @Step("Verify photo options modal is displayed")
+    public boolean isPhotoOptionsDisplayed() {
+        AllureUtils.step("Checking if photo options modal is displayed");
+        waitForPageLoad();
+        boolean isDisplayed = isElementDisplayed(takePhotoOption) ||
+                isElementDisplayed(cameraRollOption);
+        LogUtils.info("Photo options displayed: " + isDisplayed);
+        return isDisplayed;
+    }
+
+    /**
+     * Check if "Take a photo" option is displayed
+     */
+    @Step("Verify Take a photo option is displayed")
+    public boolean isTakePhotoOptionDisplayed() {
+        AllureUtils.step("Checking if Take a photo option is displayed");
+        return isElementPresent(takePhotoOption);
+    }
+
+    /**
+     * Check if "Camera roll" option is displayed
+     */
+    @Step("Verify Camera roll option is displayed")
+    public boolean isCameraRollOptionDisplayed() {
+        AllureUtils.step("Checking if Camera roll option is displayed");
+        return isElementPresent(cameraRollOption);
+    }
+
+    /**
+     * Check if "Remove current photo" option is displayed
+     * This option only appears when user has a profile photo
+     */
+    @Step("Verify Remove photo option is displayed")
+    public boolean isRemovePhotoOptionDisplayed() {
+        AllureUtils.step("Checking if Remove photo option is displayed");
+        return isElementPresent(removePhotoOption);
+    }
+
+    /**
+     * Check if "Cancel" button is displayed
+     */
+    @Step("Verify Cancel button is displayed")
+    public boolean isCancelOptionDisplayed() {
+        AllureUtils.step("Checking if Cancel button is displayed");
+        return isElementPresent(cancelPhotoOption);
+    }
+
+    /**
+     * Click "Take a photo" option
+     */
+    @Step("Click Take a photo option")
+    public Personal_InformationPage clickTakePhoto() {
+        AllureUtils.step("Tapping Take a photo option");
+        clickElement(takePhotoOption);
+        waitForPageLoad();
+        return this;
+    }
+
+    /**
+     * Click "Camera roll" option
+     */
+    @Step("Click Camera roll option")
+    public Personal_InformationPage clickCameraRoll() {
+        AllureUtils.step("Tapping Camera roll option");
+        clickElement(cameraRollOption);
+        waitForPageLoad();
+        return this;
+    }
+
+    /**
+     * Click "Remove current photo" option
+     */
+    @Step("Click Remove current photo option")
+    public Personal_InformationPage clickRemovePhoto() {
+        AllureUtils.step("Tapping Remove current photo option");
+        clickElement(removePhotoOption);
+        waitForPageLoad();
+        return this;
+    }
+
+    /**
+     * Click "Cancel" button to close photo options modal
+     */
+    @Step("Click Cancel to close photo options")
+    public Personal_InformationPage cancelPhotoEdit() {
+        AllureUtils.step("Tapping Cancel button");
+        clickElement(cancelPhotoOption);
+        waitForPageLoad();
+        return this;
+    }
+
+    /**
+     * Remove profile photo and return to personal info page
+     * Complete flow: Click edit → Click remove → Return to page
+     */
+    @Step("Remove profile photo")
+    public Personal_InformationPage removeProfilePhoto() {
+        AllureUtils.step("Removing profile photo");
+        clickEditProfilePicture();
+        clickRemovePhoto();
+        // Should auto-return to personal info page after removal
+        waitForPageLoad();
+        return this;
+    }
+
+    /**
+     * Check if user currently has a profile photo
+     * Determined by whether "Remove photo" option would appear
+     */
+    @Step("Check if user has profile photo")
+    public boolean hasProfilePhoto() {
+        AllureUtils.step("Checking if user has a profile photo");
+        try {
+            clickEditProfilePicture();
+            boolean hasPhoto = isRemovePhotoOptionDisplayed();
+            cancelPhotoEdit();
+            LogUtils.info("User has profile photo: " + hasPhoto);
+            return hasPhoto;
+        } catch (Exception e) {
+            LogUtils.error("Failed to check photo status: " + e.getMessage());
+            cancelPhotoEdit(); // Ensure we close modal
+            return false;
+        }
     }
 }

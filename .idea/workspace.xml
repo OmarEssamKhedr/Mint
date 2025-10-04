@@ -4,31 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30765d5f-9abf-4ac5-b347-9fa260bdf359" name="Changes" comment="Windows11">
-      <change afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/CreateAccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/Personal_InformationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ciye/src/test/java/tests/Personal_InformationTest.java" afterDir="false" />
+    <list default="true" id="30765d5f-9abf-4ac5-b347-9fa260bdf359" name="Changes" comment="PersonalInfoTestCases">
+      <change afterPath="$PROJECT_DIR$/Ciye/src/test/resources/personal-info-suite.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/config/DeviceCapabilityFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/config/DeviceCapabilityFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/config/VirtualDeviceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/config/VirtualDeviceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/pages/AccountMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/AccountMenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/pages/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/AccountMenuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/testdata/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/testdata/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/utils/AllureUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/utils/AllureUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/utils/LogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/utils/LogUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/utils/ScreenshotUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/utils/ScreenshotUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/utils/WaitUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/utils/WaitUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/DataDrivenParallelTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/ParallelBaseTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/ParallelLoginTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/ProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/test/java/tests/AccountMenuTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/test/resources/multi-device-testng.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/test/resources/parallel-testng.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ciye/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/test/resources/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/main/java/pages/Personal_InformationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/main/java/pages/Personal_InformationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/AccountMenuTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/test/java/tests/AccountMenuTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciye/src/test/java/tests/Personal_InformationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciye/src/test/java/tests/Personal_InformationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,54 +49,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "TestNG./media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/multi-device-testng.xml.executor": "Run",
-    "TestNG.E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/parallel-testng.xml.executor": "Run",
-    "TestNG.LoginTests.executor": "Run",
-    "TestNG.LoginTests.testEmptyPassword.executor": "Run",
-    "TestNG.LoginTests.testInvalidEmail.executor": "Run",
-    "TestNG.LoginTests.testValidLogin.executor": "Run",
-    "TestNG.Personal_InformationTest.OpenPersonalInformationPage.executor": "Run",
-    "TestNG.Personal_InformationTest.executor": "Run",
-    "TestNG.Personal_InformationTest.testAccessBirthdayPicker.executor": "Run",
-    "TestNG.Personal_InformationTest.testAccessGenderPicker.executor": "Run",
-    "TestNG.Personal_InformationTest.testAccessNameEditPage.executor": "Run",
-    "TestNG.Personal_InformationTest.testAccessPersonalInformationPage.executor": "Run",
-    "TestNG.Personal_InformationTest.testAccessYearPicker.executor": "Run",
-    "TestNG.Personal_InformationTest.testBothFieldsEmptyValidation.executor": "Run",
-    "TestNG.Personal_InformationTest.testCancelBirthdaySelection.executor": "Run",
-    "TestNG.Personal_InformationTest.testCancelDaySelection.executor": "Run",
-    "TestNG.Personal_InformationTest.testCancelMonthSelection.executor": "Run",
-    "TestNG.Personal_InformationTest.testCancelNameEdit.executor": "Run",
-    "TestNG.Personal_InformationTest.testCancelYearSelection.executor": "Run",
-    "TestNG.Personal_InformationTest.testClearFirstName.executor": "Run",
-    "TestNG.Personal_InformationTest.testEditBothNames.executor": "Run",
-    "TestNG.Personal_InformationTest.testEditFirstName.executor": "Run",
-    "TestNG.Personal_InformationTest.testEditFirstNameSuccessfully.executor": "Run",
-    "TestNG.Personal_InformationTest.testEditLastName.executor": "Run",
-    "TestNG.Personal_InformationTest.testEmptyFirstNameValidation.executor": "Run",
-    "TestNG.Personal_InformationTest.testEmptyLastNameValidation.executor": "Run",
-    "TestNG.Personal_InformationTest.testMinimumAgeValidation.executor": "Run",
-    "TestNG.Personal_InformationTest.testMultipleNameEdits.executor": "Run",
-    "TestNG.Personal_InformationTest.testPersonalInformationDataDisplay.executor": "Run",
-    "TestNG.Personal_InformationTest.testSelectBirthYear.executor": "Run",
-    "TestNG.Personal_InformationTest.testSelectCompleteBirthday.executor": "Run",
-    "TestNG.Personal_InformationTest.testSelectGender.executor": "Run",
-    "TestNG.Personal_InformationTest.testUserLogout.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;TestNG./media/work_sda3/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/multi-device-testng.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AccountMenuTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AccountMenuTests.testProfileMenuAccess.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AccountMenuTests.testUserLogout.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint/Ciye/src/test/resources/parallel-testng.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTests.testEmptyPassword.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTests.testInvalidEmail.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTests.testValidLogin.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.OpenPersonalInformationPage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testAccessBirthdayPicker.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testAccessGenderPicker.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testAccessNameEditPage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testAccessPersonalInformationPage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testAccessPhotoOptionsModal.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testAccessYearPicker.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testBothFieldsEmptyValidation.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testCancelBirthdaySelection.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testCancelDaySelection.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testCancelMonthSelection.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testCancelNameEdit.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testCancelPhotoEdit.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testCancelYearSelection.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testClearFirstName.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testEditBothNames.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testEditFirstName.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testEditFirstNameSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testEditLastName.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testEmptyFirstNameValidation.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testEmptyLastNameValidation.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testInitialsChangeWithName.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testMinimumAgeValidation.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testMultipleNameEdits.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testPersonalInformationDataDisplay.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testRemoveOptionAppearsWithPhoto.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testRemovePhotoInitialsReturn.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testSelectBirthYear.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testSelectCompleteBirthday.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testSelectFemaleGender.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testSelectGender.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testSelectMaleGender.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testSelectPreferNotToSayGender.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testUserLogout.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testVerifyInitialsDisplay.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Personal_InformationTest.testVerifyPhotoOptionsDisplayed.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Omar/Testing/Manual Testing/Zetaton/9Sea/Mint&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="TestNG.Personal_InformationTest.testSelectGender">
-    <configuration name="Personal_InformationTest.testAccessGenderPicker" type="TestNG" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="TestNG.Personal_InformationTest.testVerifyInitialsDisplay">
+    <configuration name="Personal_InformationTest.testCancelPhotoEdit" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Ciye" />
       <extension name="coverage">
         <pattern>
@@ -123,7 +119,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.Personal_InformationTest" />
-      <option name="METHOD_NAME" value="testAccessGenderPicker" />
+      <option name="METHOD_NAME" value="testCancelPhotoEdit" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -131,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Personal_InformationTest.testCancelDaySelection" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Personal_InformationTest.testInitialsChangeWithName" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Ciye" />
       <extension name="coverage">
         <pattern>
@@ -141,7 +137,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.Personal_InformationTest" />
-      <option name="METHOD_NAME" value="testCancelDaySelection" />
+      <option name="METHOD_NAME" value="testInitialsChangeWithName" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -149,7 +145,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Personal_InformationTest.testCancelYearSelection" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Personal_InformationTest.testRemoveOptionAppearsWithPhoto" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Ciye" />
       <extension name="coverage">
         <pattern>
@@ -159,7 +155,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.Personal_InformationTest" />
-      <option name="METHOD_NAME" value="testCancelYearSelection" />
+      <option name="METHOD_NAME" value="testRemoveOptionAppearsWithPhoto" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -167,7 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Personal_InformationTest.testMinimumAgeValidation" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Personal_InformationTest.testRemovePhotoInitialsReturn" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Ciye" />
       <extension name="coverage">
         <pattern>
@@ -177,7 +173,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.Personal_InformationTest" />
-      <option name="METHOD_NAME" value="testMinimumAgeValidation" />
+      <option name="METHOD_NAME" value="testRemovePhotoInitialsReturn" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -185,7 +181,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Personal_InformationTest.testSelectGender" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Personal_InformationTest.testVerifyInitialsDisplay" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Ciye" />
       <extension name="coverage">
         <pattern>
@@ -195,7 +191,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.Personal_InformationTest" />
-      <option name="METHOD_NAME" value="testSelectGender" />
+      <option name="METHOD_NAME" value="testVerifyInitialsDisplay" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -205,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Personal_InformationTest.testSelectGender" />
-        <item itemvalue="TestNG.Personal_InformationTest.testAccessGenderPicker" />
-        <item itemvalue="TestNG.Personal_InformationTest.testMinimumAgeValidation" />
-        <item itemvalue="TestNG.Personal_InformationTest.testCancelDaySelection" />
-        <item itemvalue="TestNG.Personal_InformationTest.testCancelYearSelection" />
+        <item itemvalue="TestNG.Personal_InformationTest.testVerifyInitialsDisplay" />
+        <item itemvalue="TestNG.Personal_InformationTest.testInitialsChangeWithName" />
+        <item itemvalue="TestNG.Personal_InformationTest.testRemovePhotoInitialsReturn" />
+        <item itemvalue="TestNG.Personal_InformationTest.testCancelPhotoEdit" />
+        <item itemvalue="TestNG.Personal_InformationTest.testRemoveOptionAppearsWithPhoto" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758672150685</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="PersonalInfoTestCases">
+      <option name="closed" value="true" />
+      <created>1759306410913</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1759306410913</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -255,6 +259,7 @@
     <MESSAGE value="3" />
     <MESSAGE value="3.1" />
     <MESSAGE value="Windows11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Windows11" />
+    <MESSAGE value="PersonalInfoTestCases" />
+    <option name="LAST_COMMIT_MESSAGE" value="PersonalInfoTestCases" />
   </component>
 </project>
